@@ -17,3 +17,16 @@ Scrum Master Notes:
 
 Development Team Notes:
         JS Coding Standards: https://contribute.jquery.org/style-guide/js/
+        Using VS Code IDE
+        Source Control Via GitHub
+        Outside class communication via Discord
+        Definintion of Ready:
+            Code compiles
+            Code has been peer reviewed by at least 1 other developer
+        Defininition of done:
+            Code has been reviewed by PO
+        Comment on everything (none of know JS, comment for learning)
+        Estimation technique TBD, based on how long initial display takes to implement.
+        Find a source material to use to learn JS that we can all use to be on the same page. 
+        
+        
