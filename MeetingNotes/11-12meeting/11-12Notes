@@ -1,0 +1,47 @@
+Daily Scrum:
+
+The daily scrum took around 15 minutes. The Scrum Master asked each developer what we had accomplished over the weekend and if we had any roadblocks. Dev responses were all similar, was along the lines of: "We completed the knowledge check, which involved creating a simple program using JavaScript. The program took in a value 'temp' and displayed a message depending on the temperature. This served as a learning tool for us. None of us faced significant roadblocks, only minor hiccups typical of the learning process."
+
+Sprint Review:
+
+We reviewed the performance of Sprint 1 and met all the PBIs (Product Backlog Items) for Sprint 1, so we agreed it was ready for release.
+
+Retrospective:
+
+As a team, we completed an activity where we wrote down what went well, what could've been better, and ideas to improve in the sprint. We wrote these items on sticky notes and placed them on a board under three categories. We then discussed each item in detail, agreeing or disagreeing as necessary.
+
+What Went Well: Communication, knowledge check, time management, task completion, and feedback.
+
+What Could've Been Better: Issues with Jira, mostly due to our unfamiliarity with the software and some issues within the software itself.
+
+Ideas:
+
+Have a developer devote themselves to QA? This was a prominent topic due to our small team size. We don't have enough manpower to dedicate someone specifically to QA, so for Sprint 2, each developer will unit test their code before moving it to the "Done" column.
+Source control using GitHub: We plan to use branching moving forward.
+Define code review steps: Establish a set procedure for code reviews.
+Add a review section to the Kanban board: We updated Jira to include a record of ownership for code reviews.
+
+Sprint Planning:
+
+Implement a learning activity for source control: Each developer will branch off the main branch and add a comment to the main file.
+PBI 1: Do some source control learning and add their name to the top comment block on welcome.html.
+
+PBI 2: Add difficulty buttons that redirect to the appropriate page and display an on-screen keyboard.
+Buttons should be rectangles under the image.
+Buttons should direct to a page displaying the difficulty mode they chose with a centered <h1> tag.
+Buttons should be color-coded: green for easy, yellow for medium, and red for hard.
+
+PBI 2: Create the on-screen keyboard for the page navigated to from the difficulty buttons.
+Keyboard should be in QWERTY style without numbers or special characters, only the alphabet.
+At least one button should display its letter on the screen when pressed.
+
+PBI 3: Develop functioning Hangman code that can be played on the easy mode screen.
+Landing Page:
+The landing page will include the team name at the top, a graphic of our "Hangman" directly below, and three buttons (easy, medium, hard) underneath.
+The buttons will redirect to new pages based on the selected difficulty.
+The new page will display the selected difficulty at the top, a graphic of our "Hangman" below, blanks representing unguessed letters, and an on-screen keyboard.
+
+Daily Scrum:
+Discussed the plan to complete the source control learning activity (as mentioned earlier).
+Reiterated usual scrum protocols: focusing on one task at a time.
+This session went better than the last time.
