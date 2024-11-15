@@ -8,15 +8,20 @@
     <link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>EASY</title>
 </head>
-<div class="container">
-    <div class="text-center">
-        <img src="images/teacher1.png" alt="teacher" height="200" width="200">
+<body>
+    <div class="container">
+        <h1 class="text-center">Easy Mode</h1>
+        <div class="float-right" style="">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
+        <div class="text-center">
+            <img src="images/teacher1.png" alt="teacher" class="teacher-pic" height="250" width="250">
+            <img src="images/0.png" alt="Grade of A" id="hangmanPic" class="hangman-pic" height="100" width="100">
+            <p id="wordSpotlight" class="word-spotlight">The word to guess</p>
+            <div class="keyboard-container" id="keyboard"></div>
+            <div class="reset-button-container">
+                <button class="btn btn-info" onClick="reset()">Reset</button>                
+            </div>
+        </div>
     </div>
-    
-    <div id="keyboard"></div>
-    
-
-</div>
-<script src="index.js"></script>
+<script src="/scripts/gameLogic.js"></script>
 </body>
 </html>
