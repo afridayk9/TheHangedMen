@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>EASY</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Easy Mode</h1>
+        <div class="float-right" style="">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
+        <div class="text-center">
+            <img src="images/teacher1.png" alt="teacher" class="teacher-pic" height="250" width="250">
+            <img src="images/0.png" alt="Grade of A" id="hangmanPic" class="hangman-pic" height="100" width="100">
+            <p id="wordSpotlight" class="word-spotlight">The word to guess</p>
+            <div class="keyboard-container" id="keyboard"></div>
+            <div class="reset-button-container">
+                <button class="btn btn-info" onClick="reset()">Reset</button>                
+            </div>
+        </div>
+    </div>
+<script src="/scripts/gameLogic.js"></script>
+</body>
+</html>

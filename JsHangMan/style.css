@@ -22,11 +22,62 @@ body {
     margin: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: not-allowed; /* Placeholder for now */
+    cursor: pointer; /* Placeholder for now */
 }
 h1 {
     color: white;
     margin-top: 10px;
     position: absolute;
     top: 10px; /* Position the header 10px below the top border */
+}
+
+.float-right {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.reset-button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.keyboard-container {
+    position: absolute;
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.word-spotlight {
+    position: absolute;
+    bottom: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.hangman-pic {
+    position: absolute;
+    top: 200px; /* Adjust this value to change the vertical position */
+    left: 50%;
+    transform: translate(25%, 0); /* Adjust the first value to change horizontal justification */
+}
+
+.teacher-pic {
+    position: absolute;
+    top: 300px; 
+    left: 50%;
+    transform: translate(-80%, 0);
+}
+
+.message {
+    color: white;
+    font-size: 24px;
+    text-align: center;
 }
