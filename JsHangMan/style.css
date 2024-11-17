@@ -63,15 +63,15 @@ h1 {
 }
 
 .hangman-pic {
-    position: absolute;
-    top: 200px; /* Adjust this value to change the vertical position */
-    left: 50%;
+    position: relative;
+    top: 0px; /* Adjust this value to change the vertical position */
+    left: -25%;
     transform: translate(25%, 0); /* Adjust the first value to change horizontal justification */
 }
 
 .teacher-pic {
-    position: absolute;
-    top: 300px; 
+    position: relative;
+    top: 150px; 
     left: 50%;
     transform: translate(-80%, 0);
 }
