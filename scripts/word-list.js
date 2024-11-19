@@ -1,5 +1,0 @@
-const wordList = [
-    {
-        word: "software"        
-    }
-];
