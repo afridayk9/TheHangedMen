@@ -1,0 +1,18 @@
+Test Case 1: Check if the output displays properly on various screen sizes
+  Validating: SCRUM 51
+  Pre Condition: welcome.html, easymode.html, mediummode.html, hardmode.html all need to be working and display on dev system
+  Action: Using browser dev tools, toggle display for several devices
+  Post Condition: all on screen elements adjust appropriately according to display size
+
+Test Case 2: Check if mediummode.html works with proper word bank
+  Validating: SCRUM 52
+  Pre Condition: game logic from easy mode applied to mediummode.html
+  Action: when clicking medium button on welcome page, game redirects to mediummode.html. guessedword should be loaded through the randomWordMedium function
+  Post Condition: Knowing the answer, the handle guess function should account for wrong guesses and correct letters according the word loaded in mediumWord array
+
+Test Case 3: Check if hardmode.html works with proper word bank
+  Validating: SCRUM 53
+  Pre Condition: game logic from easy mode applied to hardmode.html
+  Action: when clicking hard button on welcome page, game redirects to hardmode.html. guessedword should be loaded through the randomWordHard function
+  Post Condition: Knowing the answer, the handle guess function should account for wrong guesses and correct letters according the word loaded in hardWord array
+
