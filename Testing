@@ -16,3 +16,16 @@ Test Case 3: Check if hardmode.html works with proper word bank
   Action: when clicking hard button on welcome page, game redirects to hardmode.html. guessedword should be loaded through the randomWordHard function
   Post Condition: Knowing the answer, the handle guess function should account for wrong guesses and correct letters according the word loaded in hardWord array
 
+Test Case 4: See if the scoring system increments and decrements with correct and incorrect guesses
+  Validating: SCRUM 11
+  Pre Condition: function for each mode increments the score based on correct gueses (easy: +10, medium: +20, hard: +30)
+  Action: when selecting a correct letter, score goes up accordingly
+  Post Condition: Score maintains between rounds, game ends when word not guessed
+
+Test Case 5: Ensure the hangman-pic.jpg changes when a wrong letter is guessed
+  Validating: SCRUM 21
+  Pre Condition: hangman-pic 0.jpg appears when game is started, game is reset, or round changes
+  Action: select a correct letter, hangman-pic should not change. select and incorrect letter
+  Post Condition: mistakes made increments with correct guesses. on wrong letter guess, , #.jpg should increment by 1 and change the picture accordingly
+  
+
