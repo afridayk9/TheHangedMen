@@ -1,17 +1,30 @@
 //placeholder word for testing
 var word = ["SOFTWARE"]
+var mediumWord = ["DEVELOPER"]
+var hardWord = ["JAVASCRIPT"]
 
 let answer = "";
 let maxWrong = 5;
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
+let score = 0;
 
 //takes a random word from the array stored in the variable "word"
 function randomWord() {
+  
+  
   answer = word[Math.floor(Math.random() * word.length)];
   //Using alert to ensure the function is working properly
   //alert(answer);
+}
+
+function randomWordMedium() {
+  answer = mediumWord[Math.floor(Math.random() * word.length)];
+}
+
+function randomWordHard() {
+  answer = hardWord[Math.floor(Math.random() * word.length)];
 }
 
 //Creates the buttons for the user to select a letter
@@ -28,6 +41,18 @@ function generateButtons() {
     `).join('');
 
   document.getElementById('keyboard').innerHTML = buttonsHTML;
+}
+
+function pageHandler() {
+  if(window.location.pathname.endsWith("easyMode.html")){
+    randomWord();
+  }
+  else if(window.location.pathname.endsWith("mediumMode.html")){
+    randomWordMedium();
+  }
+  else if(window.location.pathname.endsWith("hardmode.html")){
+    randomWordHard();
+  }
 }
 
 //Displays the word with the correct letters guessed
@@ -69,6 +94,13 @@ function updateMistakes() {
   document.getElementById('mistakes').innerHTML = mistakes;
 }
 
+//Updates the score
+function updateSecore (){
+  document.getElementById('score').innerHTML = score;
+  checkIfGameWon();
+  score++;
+}
+
 //checks if the game is won by comparing the wordStatus to the answer
 function checkIfGameWon() {
   if (wordStatus === answer) {
@@ -97,9 +129,11 @@ function reset() {
 }
 
 
+
 document.getElementById('maxWrong').innerHTML = maxWrong;
 
-randomWord();
+pageHandler();
+//randomWord();
 generateButtons();
 guessedWord();
 

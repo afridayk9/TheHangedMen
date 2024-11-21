@@ -38,6 +38,12 @@ h1 {
     right: 20px;
 }
 
+.float-left {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
 .reset-button-container {
     position: absolute;
     bottom: 20px;
@@ -72,9 +78,7 @@ h1 {
 .teacher-pic {
     position: relative;
     top: 150px; 
-    left: 50%;
-    width: auto;
-    height: auto;
+    left: 50%;    
     transform: translate(-80%, 0);
 }
 
