@@ -71,6 +71,9 @@ function handleGuess(chosenLetter) {
   //checks if the letter is in the word
   if (answer.indexOf(chosenLetter) >= 0) {
     //if the letter is in the word, the guessed word is updated
+    score += 10;
+    document.getElementById('score').innerHTML = score;
+    
     guessedWord();
     //checks if the game is won
     checkIfGameWon();    
@@ -94,12 +97,6 @@ function updateMistakes() {
   document.getElementById('mistakes').innerHTML = mistakes;
 }
 
-//Updates the score
-function updateSecore (){
-  document.getElementById('score').innerHTML = score;
-  checkIfGameWon();
-  score++;
-}
 
 //checks if the game is won by comparing the wordStatus to the answer
 function checkIfGameWon() {
@@ -113,6 +110,8 @@ function checkIfGameLost() {
   if (mistakes === maxWrong) {
     document.getElementById('wordSpotlight').innerHTML = 'The answer was: ' + answer;
     document.getElementById('keyboard').innerHTML = '<span class="message">You Lost!!!</span>';
+    score = 0;
+    document.getElementById('score').innerHTML = score;
   }
 }
 
