@@ -1,5 +1,5 @@
 //placeholder word for testing
-var word = ["SOFTWARE"]
+var word = ["BINARY","BUFFER","SERVER","PACKET","SOCKET","CURSOR","CACHE","THREAD","INPUT","VECTOR"]
 var mediumWord = ["DEVELOPER"]
 var hardWord = ["JAVASCRIPT"]
 
