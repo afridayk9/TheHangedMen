@@ -1,7 +1,7 @@
 //placeholder word for testing
 var word = ["BINARY","BUFFER","SERVER","PACKET","SOCKET","CURSOR","CACHE","THREAD","INPUT","VECTOR"]
-var mediumWord = ["DEVELOPER"]
-var hardWord = ["JAVASCRIPT"]
+var mediumWord = ["ALGORITHM","DATABASE","FIREWALL","COMPILER","DEBUGGER","ENCRYPTION","BANDWIDITH","PROTOCOL","INTERFACE","FRAMEWORK"]
+var hardWord = ["MULTITHREADING","CRYPTOGRAPHY","HYPERLINKING","ARTIFICIALLY","MICROPROCESSOR","INTEROPERABLE","CYBERSECURITY","VIRTUALIZATION","COMPUTATIONAL","IMPLEMENTATION"]
 
 let answer = "";
 let maxWrong = 5;
@@ -11,9 +11,7 @@ let wordStatus = null;
 let score = 0;
 
 //takes a random word from the array stored in the variable "word"
-function randomWord() {
-  
-  
+function randomWord() {  
   answer = word[Math.floor(Math.random() * word.length)];
   //Using alert to ensure the function is working properly
   //alert(answer);
@@ -21,10 +19,12 @@ function randomWord() {
 
 function randomWordMedium() {
   answer = mediumWord[Math.floor(Math.random() * word.length)];
+  //alert(answer);
 }
 
 function randomWordHard() {
   answer = hardWord[Math.floor(Math.random() * word.length)];
+  //alert(answer);
 }
 
 //Creates the buttons for the user to select a letter
