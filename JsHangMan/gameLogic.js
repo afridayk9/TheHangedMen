@@ -17,13 +17,16 @@ function randomWord() {
   //alert(answer);
 }
 
+// Function to select a random word from the 'mediumWord' array
 function randomWordMedium() {
-  answer = mediumWord[Math.floor(Math.random() * word.length)];
+  answer = mediumWord[Math.floor(Math.random() * mediumWord.length)];
   //alert(answer);
 }
 
+// Function to select a random word from the 'hardWord' array
+
 function randomWordHard() {
-  answer = hardWord[Math.floor(Math.random() * word.length)];
+  answer = hardWord[Math.floor(Math.random() * hardWord.length)];
   //alert(answer);
 }
 
@@ -43,6 +46,7 @@ function generateButtons() {
   document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
+//navigates to a game page that corresponsds with the difficulty level selected
 function pageHandler() {
   if(window.location.pathname.endsWith("easyMode.html")){
     randomWord();
@@ -128,7 +132,7 @@ function reset() {
 }
 
 
-
+//finds the max wrong section of the html and sets it to the value of maxWrong
 document.getElementById('maxWrong').innerHTML = maxWrong;
 
 pageHandler();
