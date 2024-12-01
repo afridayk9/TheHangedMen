@@ -1,6 +1,6 @@
 body {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column; */
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -10,6 +10,7 @@ body {
     box-sizing: border-box;
     position: relative;
 }
+
 .button-container {
     text-align: center;
     display: flex;
@@ -24,11 +25,18 @@ body {
     font-size: 16px;
     cursor: pointer; /* Placeholder for now */
 }
+
+.header {
+    height: 100px;
+    margin: auto;
+}
+
+
 h1 {
     color: white;
     margin-top: 10px;
-    position: absolute;
     top: 10px; /* Position the header 10px below the top border */
+    text-align: center;
 }
 
 .float-right {
@@ -44,6 +52,19 @@ h1 {
     top: 10px;
     left: 20px;
 }
+
+.image-container {
+    height: 300px;
+    margin: auto;
+}
+
+.teacher-pic {
+    position: relative;
+    top: 150px; 
+    left: 50%;    
+    transform: translate(-80%, 0);
+}
+
 .reset-button-container {
     position: absolute;
     bottom: 20px;
@@ -73,13 +94,6 @@ h1 {
     top: 0px; /* Adjust this value to change the vertical position */
     left: -25%;
     transform: translate(25%, 0); /* Adjust the first value to change horizontal justification */
-}
-
-.teacher-pic {
-    position: relative;
-    top: 150px; 
-    left: 50%;    
-    transform: translate(-80%, 0);
 }
 
 .message {
