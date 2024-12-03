@@ -20,14 +20,14 @@ function randomWord() {
 // Function to select a random word from the 'mediumWord' array
 function randomWordMedium() {
   answer = mediumWord[Math.floor(Math.random() * mediumWord.length)];
-  //alert(answer);
+  alert(answer);
 }
 
 // Function to select a random word from the 'hardWord' array
 
 function randomWordHard() {
   answer = hardWord[Math.floor(Math.random() * hardWord.length)];
-  //alert(answer);
+  alert(answer);
 }
 
 //Creates the buttons for the user to select a letter
