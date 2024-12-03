@@ -33,7 +33,6 @@ function randomWordMedium() {
 }
 
 // Function to select a random word from the 'hardWord' array
-
 function randomWordHard() {
   answer = hardWord[Math.floor(Math.random() * hardWord.length)];
   //Using alert to ensure the function is working properly
@@ -52,7 +51,6 @@ function generateButtons() {
         ` + letter + `
       </button>
     `).join('');
-
   document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
@@ -64,7 +62,7 @@ function pageHandler() {
   else if(window.location.pathname.endsWith("mediumMode.html")){
     randomWordMedium();
   }
-  else if(window.location.pathname.endsWith("hardmode.html")){
+  else if(window.location.pathname.endsWith("hardMode.html")){
     randomWordHard();
   }
 }
@@ -72,7 +70,6 @@ function pageHandler() {
 //Displays the word with the correct letters guessed
 function guessedWord() {
   wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
-
   document.getElementById('wordSpotlight').innerHTML = wordStatus;
 }
 
@@ -81,13 +78,11 @@ function handleGuess(chosenLetter) {
   guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
   //disables the button after it is clicked
   document.getElementById(chosenLetter).setAttribute('disabled', true);
-
   //checks if the letter is in the word
   if (answer.indexOf(chosenLetter) >= 0) {
     //if the letter is in the word, the guessed word is updated
     score += 10;
-    document.getElementById('score').innerHTML = score;
-    
+    document.getElementById('score').innerHTML = score;    
     guessedWord();
     //checks if the game is won
     checkIfGameWon();    
@@ -111,7 +106,6 @@ function updateMistakes() {
   document.getElementById('mistakes').innerHTML = mistakes;
 }
 
-
 //checks if the game is won by comparing the wordStatus to the answer
 function checkIfGameWon() {
   if (wordStatus === answer) {
@@ -134,19 +128,16 @@ function reset() {
   mistakes = 0;
   guessed = [];
   document.getElementById('hangmanPic').src = 'images/0.png';
-
   randomWord();
   guessedWord();
   updateMistakes();
   generateButtons();
 }
 
-
 //finds the max wrong section of the html and sets it to the value of maxWrong
 document.getElementById('maxWrong').innerHTML = maxWrong;
 
 pageHandler();
-//randomWord();
 generateButtons();
 guessedWord();
 
