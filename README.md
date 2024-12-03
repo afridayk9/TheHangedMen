@@ -29,6 +29,7 @@ CSCI4250_GroupScrumProject
        da. https://random-word-api.herokuapp.com/home 
    e. optimize game page so it is dynamic to the game mode decreasing games pages from three to one
    f. currenty file size is 14.1 Mb, needs to be 10 Mb or less
+   g. create an "end of game summary" that displays rounds passed/number of words guessed correct, total score
 
 
 4. Recommmendations
