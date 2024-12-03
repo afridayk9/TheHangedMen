@@ -38,6 +38,12 @@ h1 {
     right: 20px;
 }
 
+.float-left {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
 .reset-button-container {
     position: absolute;
     bottom: 20px;
@@ -72,7 +78,7 @@ h1 {
 .teacher-pic {
     position: relative;
     top: 150px; 
-    left: 50%;
+    left: 50%;    
     transform: translate(-80%, 0);
 }
 
@@ -80,4 +86,12 @@ h1 {
     color: white;
     font-size: 24px;
     text-align: center;
+}
+
+#game-title {
+    color: white;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    width: auto;
 }

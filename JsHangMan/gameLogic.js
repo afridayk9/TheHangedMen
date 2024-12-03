@@ -1,15 +1,40 @@
-//placeholder word for testing
-var word = ["SOFTWARE"]
+//words used for easy mode that conist of 5-6 letters
+var word = ["BINARY","BUFFER","SERVER","PACKET","SOCKET","CURSOR","CACHE","THREAD","INPUT","VECTOR"]
+//words for hard mode that consist of 7-10 letters
+var mediumWord = ["ALGORITHM","DATABASE","FIREWALL","COMPILER","DEBUGGER","ENCRYPTION","BANDWIDITH","PROTOCOL","INTERFACE","FRAMEWORK"]
+//words for hard mode that consist of 10-15 letters
+var hardWord = ["MULTITHREADING","CRYPTOGRAPHY","HYPERLINKING","ARTIFICIALLY","MICROPROCESSOR","INTEROPERABLE","CYBERSECURITY","VIRTUALIZATION","COMPUTATIONAL","IMPLEMENTATION"]
 
+//initializes the "answer" variable to an empty string
 let answer = "";
+//initializes the "maxWrong" variable to 5
 let maxWrong = 5;
+//initializes the "mistakes" variable to 0
 let mistakes = 0;
+//initializes the "guessed" variable to an empty array
 let guessed = [];
+//initializes the "wordStatus" variable to null
 let wordStatus = null;
+//initializes the "score" variable to 0
+let score = 0;
 
 //takes a random word from the array stored in the variable "word"
-function randomWord() {
+function randomWord() {  
   answer = word[Math.floor(Math.random() * word.length)];
+  //Using alert to ensure the function is working properly
+  //alert(answer);
+}
+
+// Function to select a random word from the 'mediumWord' array
+function randomWordMedium() {
+  answer = mediumWord[Math.floor(Math.random() * mediumWord.length)];
+  //Using alert to ensure the function is working properly
+  //alert(answer);
+}
+
+// Function to select a random word from the 'hardWord' array
+function randomWordHard() {
+  answer = hardWord[Math.floor(Math.random() * hardWord.length)];
   //Using alert to ensure the function is working properly
   //alert(answer);
 }
@@ -26,14 +51,25 @@ function generateButtons() {
         ` + letter + `
       </button>
     `).join('');
-
   document.getElementById('keyboard').innerHTML = buttonsHTML;
+}
+
+//navigates to a game page that corresponsds with the difficulty level selected
+function pageHandler() {
+  if(window.location.pathname.endsWith("easyMode.html")){
+    randomWord();
+  }
+  else if(window.location.pathname.endsWith("mediumMode.html")){
+    randomWordMedium();
+  }
+  else if(window.location.pathname.endsWith("hardMode.html")){
+    randomWordHard();
+  }
 }
 
 //Displays the word with the correct letters guessed
 function guessedWord() {
   wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
-
   document.getElementById('wordSpotlight').innerHTML = wordStatus;
 }
 
@@ -42,10 +78,11 @@ function handleGuess(chosenLetter) {
   guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
   //disables the button after it is clicked
   document.getElementById(chosenLetter).setAttribute('disabled', true);
-
   //checks if the letter is in the word
   if (answer.indexOf(chosenLetter) >= 0) {
     //if the letter is in the word, the guessed word is updated
+    score += 10;
+    document.getElementById('score').innerHTML = score;    
     guessedWord();
     //checks if the game is won
     checkIfGameWon();    
@@ -81,6 +118,8 @@ function checkIfGameLost() {
   if (mistakes === maxWrong) {
     document.getElementById('wordSpotlight').innerHTML = 'The answer was: ' + answer;
     document.getElementById('keyboard').innerHTML = '<span class="message">You Lost!!!</span>';
+    score = 0;
+    document.getElementById('score').innerHTML = score;
   }
 }
 
@@ -89,17 +128,16 @@ function reset() {
   mistakes = 0;
   guessed = [];
   document.getElementById('hangmanPic').src = 'images/0.png';
-
   randomWord();
   guessedWord();
   updateMistakes();
   generateButtons();
 }
 
-
+//finds the max wrong section of the html and sets it to the value of maxWrong
 document.getElementById('maxWrong').innerHTML = maxWrong;
 
-randomWord();
+pageHandler();
 generateButtons();
 guessedWord();
 
