@@ -21,16 +21,16 @@ CSCI4250_GroupScrumProject
                  cbbac. the checkIfGameWon function is called and if false, the checkIfGameLost function is called. if false, the game continues
 
 
-   2. Still need to do:
-      a. add a system to add user initial for top 10 score
-      b. add additional grades to give the user more maxWrong. i.e. A, A-, B, B-, etc.
-      c. fix the css so that it is adaptive for different displays.
-      d. use an api to generate words for the various difficulty levels. 
-      e. optimize game page so it is dynamic to the game mode decreasing games pages from three to one
-      f. currenty file size is 14.1 Mb, needs to be 10 Mb or less
+2. Still need to do:
+   a. add a system to add user initial for top 10 score
+   b. add additional grades to give the user more maxWrong. i.e. A, A-, B, B-, etc.
+   c. fix the css so that it is adaptive for different displays.
+   d. use an api to generate words for the various difficulty levels. 
+   e. optimize game page so it is dynamic to the game mode decreasing games pages from three to one
+   f. currenty file size is 14.1 Mb, needs to be 10 Mb or less
 
 
-   3. Recommmendations
-      a. completely restart the css and html so that you are able to establish a maintainable structure to the files. (Warning: the JavaScript uses functions that gets IDs from the html items)
-      b. We planned to use Random Word API for the generating words for the difficulties.
+3. Recommmendations
+   a. completely restart the css and html so that you are able to establish a maintainable structure to the files. (Warning: the JavaScript uses functions that gets IDs from the html items)
+   b. We planned to use Random Word API for the generating words for the difficulties.
       
