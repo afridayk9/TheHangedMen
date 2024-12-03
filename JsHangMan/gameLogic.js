@@ -1,13 +1,21 @@
-//placeholder word for testing
+//words used for easy mode that conist of 5-6 letters
 var word = ["BINARY","BUFFER","SERVER","PACKET","SOCKET","CURSOR","CACHE","THREAD","INPUT","VECTOR"]
+//words for hard mode that consist of 7-10 letters
 var mediumWord = ["ALGORITHM","DATABASE","FIREWALL","COMPILER","DEBUGGER","ENCRYPTION","BANDWIDITH","PROTOCOL","INTERFACE","FRAMEWORK"]
+//words for hard mode that consist of 10-15 letters
 var hardWord = ["MULTITHREADING","CRYPTOGRAPHY","HYPERLINKING","ARTIFICIALLY","MICROPROCESSOR","INTEROPERABLE","CYBERSECURITY","VIRTUALIZATION","COMPUTATIONAL","IMPLEMENTATION"]
 
+//initializes the "answer" variable to an empty string
 let answer = "";
+//initializes the "maxWrong" variable to 5
 let maxWrong = 5;
+//initializes the "mistakes" variable to 0
 let mistakes = 0;
+//initializes the "guessed" variable to an empty array
 let guessed = [];
+//initializes the "wordStatus" variable to null
 let wordStatus = null;
+//initializes the "score" variable to 0
 let score = 0;
 
 //takes a random word from the array stored in the variable "word"
@@ -20,14 +28,16 @@ function randomWord() {
 // Function to select a random word from the 'mediumWord' array
 function randomWordMedium() {
   answer = mediumWord[Math.floor(Math.random() * mediumWord.length)];
-  alert(answer);
+  //Using alert to ensure the function is working properly
+  //alert(answer);
 }
 
 // Function to select a random word from the 'hardWord' array
 
 function randomWordHard() {
   answer = hardWord[Math.floor(Math.random() * hardWord.length)];
-  alert(answer);
+  //Using alert to ensure the function is working properly
+  //alert(answer);
 }
 
 //Creates the buttons for the user to select a letter
